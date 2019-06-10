@@ -7,6 +7,8 @@ This small MATLAB toolbox provides the functionality of reading one or more DICO
 **Important note 2**: This code is meant solely for research purposes. Please do NOT rely on it for any clinical implementations! I do not accept any responsibility for damage caused by the use of this software.
 
 ## 2. Usage
+Download this package and put anywhere you like. Add the dicomseries directory to your MATLAB path.
+
 Analyze your DICOM directory using:
 `partitions = readDicomSeries(directory, options)`
 The partitions structure contains all information on the DICOM series present in your directory, and what is necessary to read them in properly. The `options` structure provides some additional control over the reading and partitioning (see `readDicomSeries.m` for more details). By default `readDicomSeries` will cache its results by saving a `partitions.mat` file in `directory`. This ensures that the next time you access the DICOM series it does not need to reprocess all files.
